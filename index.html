@@ -1,14 +1,31 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Page Title</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-  
-</head>
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Park Finder</title>
+        <link rel="stylesheet" href="main.css">
+        <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
+    </head>
 <body>
+  <div class="container">
+    <h1>National Park Finder By State</h1>
+
+    <form class="js-form">
+      <input type="text" class = "js-search-term" placeholder = "WA">
+      <input type="number" class="js-max-results" placeholder = "Max Results">
+      <button type = "submit" class = "js-submit-button">Submit</button>
+    </form>
+  <section class="hidden">
+    <h3>Search Results</h3>
+    <ul class="results-list">
+      
+    </ul>
+  </section>
+  </div>
 
   <script src="index.js"></script>
 </body>
