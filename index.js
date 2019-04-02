@@ -5,12 +5,6 @@ const apiKey = 'ba1WENf4DlKSZsOo2JxfW4jukcnBuPJ1FVQRBabG';
 // /parks?stateCode=&limit=&
 const url = 'https://developer.nps.gov/api/v1/parks';
 
-// function formatQueryParams(params) {
-//   const queryItems = Object.keys(params)
-//     .map(key => `${encodeURIComponent(key)}=${encodeURIComponent(params[key])}`);
-//   return queryItems.join('&');
-// }
-
 function updateResults(responseJson) {
   $('.results-list').empty();
   console.log(responseJson.data[0]['fullName']);
@@ -45,8 +39,8 @@ function getParkInfo(state, maxResults=10) {
       throw new Error('Please enter a valid input');
     })
     .then(responseJson => {
-      console.log(responseJson)
-      updateResults(responseJson)
+      console.log(responseJson);
+      updateResults(responseJson);
     })
     .catch(err => {
       $('.results-list').append(alert('Something went wrong'));
